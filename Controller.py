@@ -1,7 +1,7 @@
 #------------------- Import Section ---------------------
 
 import os, json, threading
-from bottle import get,post,run,template,request,static_file,response
+from bottle import get,post,run,template,request,static_file,response,redirect
 from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime
 from Models import hurdles
@@ -66,6 +66,7 @@ def do_createJob():
     selectedTestCases = request.forms.getall('chkTest')
     jobDetails = json.dumps({"testCases":selectedTestCases,"testPlan":testPlan,"build":buildName})
     hurdles.createJob(userName,apiKey,jobDetails,testRunner,scheduledOn,'Inactive')
+    redirect('/jobs')
 
 #-- It will return the jobs
 @get('/jobs')
