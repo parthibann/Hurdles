@@ -1,11 +1,13 @@
 #-- import Section
 #-- import all your testsuites(class level testcases here)
 from TestSuites import apiTest
+from TestSuites import uiTest
 import unittest
 
 #-- Add All your Testsuites Here
 Suites = []
 Suites.append(apiTest.functionality1)
+Suites.append(uiTest.googleTest)
 
 #-- It will return the testSuites in HTML format
 def testSuitesInHtmlFormat():
