@@ -30,7 +30,7 @@
 			</tr>
 		</thead>
 		% for data in results:
-			<tr><td>{{data[1]}}</td><td>{{data[2]}}</td><td>{{data[3]}}</td><td>{{data[4]}}</td><td>{{data[5]}}</td><td>{{data[6]}}</td><td>{{data[7]}}</td></tr>
+			<tr><td>{{data[1]}}</td><td>{{data[2]}}</td><td>{{data[3]}}</td><td>{{data[4]}}</td><td>{{data[5]}}</td><td>{{data[6]}}</td><td><img src="/static/images/{{data[7]}}.png"></td></tr>
 		% end
 		</table>
 	</div>

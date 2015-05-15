@@ -51,8 +51,7 @@ class _TestResult(TestResult):
         self.result.append((0, test, output, ''))
         testNameInString = str(test)
         _testCaseApiId = self.getTestCaseId(testNameInString)
-        _SuccessStatus = 'p'
-        self.updateTestCaseResult(_testCaseApiId, _SuccessStatus,output)
+        self.updateTestCaseResult(_testCaseApiId, 'p',str(output))
                         
     def addError(self, test, err):
         TestResult.addError(self, test, err)
@@ -61,9 +60,7 @@ class _TestResult(TestResult):
         self.result.append((2, test, output, _exc_str))
         testNameInString= str(test)
         _testCaseApiId = self.getTestCaseId(testNameInString)
-        _Errorstatus = 'f'
-        _stackTrace = str(err)
-        self.updateTestCaseResult(_testCaseApiId, _Errorstatus, _stackTrace)    
+        self.updateTestCaseResult(_testCaseApiId, 'f', str(err))
         
     def addFailure(self, test, err):
         TestResult.addFailure(self, test, err)
@@ -72,9 +69,7 @@ class _TestResult(TestResult):
         self.result.append((1, test, output, _exc_str))
         testNameInString= str(test)
         _testCaseApiId = self.getTestCaseId(testNameInString)
-        _Failurestatus = 'f'
-        _stackTrace = str(err)
-        self.updateTestCaseResult(_testCaseApiId, _Failurestatus, _stackTrace)
+        self.updateTestCaseResult(_testCaseApiId, 'f', str(err))
         
     def getTestCaseId(self,fullTestName):
         testCaseName = fullTestName.split("(")[0]

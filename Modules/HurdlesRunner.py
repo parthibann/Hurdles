@@ -53,21 +53,21 @@ class _TestResult(TestResult):
         TestResult.addSuccess(self, test)
         output = self.complete_output()
         self.result.append((0, test, output, ''))
-        self.updateTestCaseResult(str(test),output,'pass')
+        self.updateTestCaseResult(str(test),str(output),'pass')
                         
     def addError(self, test, err):
         TestResult.addError(self, test, err)
         _, _exc_str = self.errors[-1]
         output = self.complete_output()
         self.result.append((2, test, output, _exc_str))
-        self.updateTestCaseResult(str(test), err,'fail')
+        self.updateTestCaseResult(str(test), str(err),'fail')
         
     def addFailure(self, test, err):
         TestResult.addFailure(self, test, err)
         _, _exc_str = self.failures[-1]
         output = self.complete_output()
         self.result.append((1, test, output, _exc_str))
-        self.updateTestCaseResult(str(test),err,'fail')
+        self.updateTestCaseResult(str(test),str(err),'fail')
         
     def updateTestCaseResult(self,testcaseName,notes,status):
         hurdles.addResult(self.jobId,self.testerName,self.testplan,self.buildName,testcaseName,notes,status)
