@@ -63,5 +63,6 @@ html,body{
 #frame{
     width:100%;
     height:99.5%;
+    overflow: scroll;
 }
 </style>
