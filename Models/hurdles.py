@@ -12,7 +12,7 @@ import sqlite3, os
 
 #-- Global variables
 pwd = os.path.abspath(os.path.dirname(__file__))
-dbpath = pwd + '/../Database/hurdles.db'
+dbpath = pwd + '/hurdles.db'
 
 #-- To Create Database tables
 def createDB():
