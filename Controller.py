@@ -106,7 +106,7 @@ sched.start() #-- To run the scheduled jobs
 
 #--------------------Database section--------------------
 #-- To create Database
-dbpath = pwd+'/Database/hurdles.db'
+dbpath = hurdles.dbpath
 if os.path.isfile(dbpath):
     hurdles.updateSchema()
 else:
