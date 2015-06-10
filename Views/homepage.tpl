@@ -65,4 +65,7 @@ html,body{
     height:99.5%;
     overflow: scroll;
 }
+.dropdown:hover .dropdown-menu {
+display: block;
+}
 </style>
