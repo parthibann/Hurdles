@@ -1,6 +1,7 @@
 # Hurdles
 
 Installation instructions :
+
 Ubuntu :
 * sudo apt-get install python-pip
 * Download or clone Hurdles project
