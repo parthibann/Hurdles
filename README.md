@@ -13,7 +13,7 @@ Windows :
 * Install python-pip
 * Download or clone Hurdles project
 * open Hurdles folder
-* sudo pip install --upgrade -r requirements.txt
+* pip install --upgrade -r requirements.txt
 
 To start the application :
 * python Controller.py
