@@ -20,6 +20,8 @@ To start the application :
 
 open http://localhost:8181/ in webbrowser and select testcases to test.
 
+**view the demo app by clicking [here](https://hurdles-demo.herokuapp.com/)**
+
 #Screenshorts :
 
 ![homepage](https://cloud.githubusercontent.com/assets/4667360/8595187/b4791022-2665-11e5-9580-e14d386735ae.png)
